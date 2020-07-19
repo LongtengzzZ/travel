@@ -64,7 +64,7 @@
             $("#loginForm").submit(function () {
                 if(checkUsername() && checkPassword()){
                     //$("#loginForm").serialize()
-					$.post("loginServlet",$(this).serialize(),function(data){
+					$.post("user/login",$(this).serialize(),function(data){
 						//data : {flag:false,errorMsg:''}
 						if (data.flag){
 							//登录成功
