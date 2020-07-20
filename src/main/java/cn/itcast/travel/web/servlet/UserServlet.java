@@ -35,7 +35,8 @@ public class UserServlet extends BaseServlet {
         //从sesion中获取验证码
         HttpSession session = req.getSession();
         String checkcode_server = (String)session.getAttribute("CHECKCODE_SERVER");
-        session.removeAttribute("CHECKCODE_SERVER");//为了保证验证码只能使用一次
+        //为了保证验证码只能使用一次
+        session.removeAttribute("CHECKCODE_SERVER");
         //比较
         if(checkcode_server == null || !checkcode_server.equalsIgnoreCase(check)){
             //验证码错误,创建验证信息对象
@@ -177,7 +178,7 @@ public class UserServlet extends BaseServlet {
         //设置编码
         resp.setContentType("application/json;charset=utf-8");
         String json = mapper.writeValueAsString(user);
-        System.out.println(json);
+        System.out.println("查询的登录用户："+json);
         //写回客户端
         resp.getWriter().write(json);
     }
