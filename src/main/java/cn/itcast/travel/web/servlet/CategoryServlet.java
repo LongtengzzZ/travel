@@ -3,9 +3,7 @@ package cn.itcast.travel.web.servlet;
 import cn.itcast.travel.domain.Category;
 import cn.itcast.travel.service.CategoryService;
 import cn.itcast.travel.service.impl.CategoryServiceImpl;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.ObjectIdMap;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
